@@ -12,7 +12,7 @@ using System.Text;
 var builder = WebApplication.CreateBuilder(args);
 
  var Logger = new LoggerConfiguration().MinimumLevel.Information()
-    .WriteTo.File("C:\\Users\\HQ619GP\\source\\repos\\HealthCon.WebAPI\\Logs.log", 
+    .WriteTo.File($@"{Directory.GetCurrentDirectory()}", 
     rollingInterval: RollingInterval.Day)
     .CreateLogger();
 
